@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="Plasticlights.GitHub.io : Simple Pokedex">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    
+    <!-- stylesheet -->
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Pokedex</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/PlasticlightS">View on GitHub</a>
+
+          <h1 id="project_title">Pokedex</h1>
+          <h2 id="project_tagline">Using Pokéapi</h2>
+
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+          
+        <form>
+            <select id="pokeSelect" onchange="change(this);">
+            </select>
+        </form>
+          
+          <div class="pokemon" id="pokemon">
+           <h2 class="natdexno">
+              <span>National dex number: </span>
+              <span id="natdexno"></span>
+            </h2>
+
+		   <h2 class="name">
+              <span>Name: </span>
+              <span id="name"></span>
+            </h2>
+
+            <h2 class="species">
+              <span>Type: </span>
+              <span id="types"></span>
+            </h2>
+
+            <div class="sprite">
+                <img src="" id="sprite">
+            </div>
+
+            <div class="abilities">
+              <h3>Abilities</h3>
+              <ul id="abilities">
+              </ul>
+            </div>
+
+            <div class="description">
+              <h3>
+				<span>Description: </span><br />
+			  </h3>
+			  <span id="description"></span>
+            </div>
+			
+          </div>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
+
+<!-- pokemon.js -->
+<script src="javascript/pokemon.js"></script>
+
+<!-- jquery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+<!-- bootstrap js -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
