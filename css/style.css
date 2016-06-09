@@ -33,6 +33,11 @@ body {
   color: yellow;
 }
 
+.pokeball-icon {
+  width: 200px;
+  float: right;
+}
+
 .pokeball-bottom {
   position: absolute;
   bottom: 0;
@@ -74,4 +79,48 @@ body {
   right: 0;
   font-size: 16pt;
   color: black;
+}
+
+@media (max-width: 768px) {
+  .footer-text {
+    font-weight: normal;
+    font-size: 6pt;
+  }
+
+  .footer-icons {
+    font-weight: normal;
+    font-size: 12pt;
+  }
+}
+
+@media (max-width: 992px) {
+  .pokeball-icon {
+    display: none;
+  }
+  
+  .poketitle {
+    display: inline-block;
+    vertical-align: middle;
+  }
+  
+  .pokehead {
+    background: url(../images/poke-ball.svg) no-repeat center bottom;
+    background-size: contain;
+    min-height: 100px;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+}
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: @screen-sm-min) { 
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: @screen-md-min) { 
+
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: @screen-lg-min) { 
 }
