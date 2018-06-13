@@ -1,11 +1,11 @@
 function selector() {
   var xhr = new XMLHttpRequest();
-  xhr.open("GET", "http://pokeapi.co/api/v2/pokemon/", false);
+  xhr.open("GET", "https://pokeapi.co/api/v2/pokemon/", false);
   xhr.send();  
   var response = JSON.parse(xhr.response);   
   
   var limit = response.count; 
-  var url = "http://pokeapi.co/api/v2/pokemon/?limit=" + limit;
+  var url = "https://pokeapi.co/api/v2/pokemon/?limit=" + limit;
   
   var xhr2 = new XMLHttpRequest();
   xhr2.open("GET", url, false);
@@ -33,7 +33,7 @@ function change(selectObj) {
 }
     
 function populate(id)  { 
-  var url = "http://pokeapi.co/api/v2/pokemon/"+ id + "/"; 
+  var url = "https://pokeapi.co/api/v2/pokemon/"+ id + "/"; 
   var xhr = new XMLHttpRequest();
   xhr.open("GET", url, false);
   xhr.send();
@@ -62,7 +62,7 @@ function populate(id)  {
   document.getElementById("sprite").src = sprites;
   document.getElementById("abilities").innerHTML = abilities;
   
-  var url2 = "http://pokeapi.co/api/v2/pokemon-species/"+ id + "/";
+  var url2 = "https://pokeapi.co/api/v2/pokemon-species/"+ id + "/";
   var xhr2 = new XMLHttpRequest();
   xhr2.open("GET", url2, false);
   xhr2.send();
