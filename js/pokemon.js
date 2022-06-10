@@ -76,4 +76,4 @@ function ucfirst(string) {
     return string.charAt(0).toUpperCase() + string.slice(1);
 }
 
-populate("https://pokeapi.co/api/v2/pokemon-species/1");
+populate("https://pokeapi.co/api/v2/pokemon/1/");
