@@ -16,7 +16,7 @@ function selector() {
   for (var i = 0; i < arrayLength; i++) {
     var x = document.getElementById("pokeSelect");
     var option = document.createElement("option");
-	var val = i+1;
+    var val = response2.results[i].url;
     option.text = ucfirst(response2.results[i].name);
     option.value = val;
     x.add(option);
@@ -32,8 +32,7 @@ function change(selectObj) {
     populate(url);
 }
     
-function populate(id)  { 
-  var url = "https://pokeapi.co/api/v2/pokemon/"+ id + "/"; 
+function populate(url)  { 
   var xhr = new XMLHttpRequest();
   xhr.open("GET", url, false);
   xhr.send();
@@ -56,7 +55,7 @@ function populate(id)  {
     abilities += "<li>" + ucfirst(response.abilities[i].ability.name) + "</li>";
   }
   
-  document.getElementById("natdexno").innerHTML = id;
+  document.getElementById("natdexno").innerHTML = response.id;
   document.getElementById("name").innerHTML = ucfirst(response.name);
   document.getElementById("types").innerHTML = typeString;
   document.getElementById("sprite").src = sprites;
