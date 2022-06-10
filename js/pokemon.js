@@ -61,7 +61,7 @@ function populate(url)  {
   document.getElementById("sprite").src = sprites;
   document.getElementById("abilities").innerHTML = abilities;
   
-  var url2 = "https://pokeapi.co/api/v2/pokemon-species/"+ response.id + "/";
+  var url2 = response.species.url;
   var xhr2 = new XMLHttpRequest();
   xhr2.open("GET", url2, false);
   xhr2.send();
